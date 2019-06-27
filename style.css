@@ -17,6 +17,14 @@
     border-radius: 20px;
   }
 
+.img-link {
+    border: solid grey;
+}
+
+.img-link:hover {
+    background-color: lightgrey;
+}
+
 .navbar-nav li.active {
 	background-color: rgb(104, 100, 100);
 	
