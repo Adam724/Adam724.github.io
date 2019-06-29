@@ -17,6 +17,10 @@
     border-radius: 20px;
   }
 
+  .accordion i {
+    padding-right: 0.5rem !important;
+  }
+
 .img-link {
     border: solid grey;
 }
