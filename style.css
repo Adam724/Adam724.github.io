@@ -3,6 +3,7 @@
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 0;
     position: relative;
   }
 
@@ -12,9 +13,14 @@
     border-radius: 10px;
 }
 
+.card footer {
+  color: black;
+}
+
 .fakeimg {
-    background: lightgray;
+    background: lightblue;
     border-radius: 20px;
+    box-shadow: 5px 10px 8px #888888;
   }
 
   .accordion i {
@@ -32,6 +38,11 @@
 .navbar-nav li.active {
 	background-color: rgb(104, 100, 100);
 	
+}
+
+.logo:hover {
+  opacity: 0.75;
+  /*box-shadow: 5px 10px 8px #888888;*/ 
 }
 
 .navbar .nav-item {
