@@ -71,51 +71,59 @@ watchForHover();
 
   <div class="row">
     <div class="col-md-8">
-        <button class="accordion"><i class="fas fa-user-friends"></i>Initial Consultation Meeting</button>
-        <div class="panel">
-          <p>Student and parents complete surveys and forms and provide an unofficial transcript and class schedule in advance of a 90-minute meeting to discuss strategy, timeline and recommendations for college planning. A detailed follow-up report after the meeting will offer links and resources for continued college search and planning.  The fee will be applied to the Comprehensive Plan (below) if the family later chooses that option.</p>
+      <div>
+        <div class="d-flex justify-content-start">
+          <button class="accordion-btn p-2" onclick="collapseAll()">Collapse All</button>
+          <button class="accordion-btn p-2" onclick="expandAll()">Expand All</button>
         </div>
-      
-        <button class="accordion"><i class="fas fa-cubes"></i>Comprehensive Package</button>
-        <div class="panel">
-          <p>This is an all-inclusive package for high school students and families seeking assistance throughout the entire process of preparing for college, searching for a right-fit college, applying to colleges and making a final selection.</p>
+
+        <div style="border: 1px solid darkgray;">
+          <button class="accordion"><i class="fas fa-user-friends"></i>Initial Consultation Meeting</button>
+          <div class="panel">
+            <p>Student and parents complete surveys and forms and provide an unofficial transcript and class schedule in advance of a 90-minute meeting to discuss strategy, timeline and recommendations for college planning. A detailed follow-up report after the meeting will offer links and resources for continued college search and planning.  The fee will be applied to the Comprehensive Plan (below) if the family later chooses that option.</p>
+          </div>
+        
+          <button class="accordion"><i class="fas fa-cubes"></i>Comprehensive Package</button>
+          <div class="panel">
+            <p>This is an all-inclusive package for high school students and families seeking assistance throughout the entire process of preparing for college, searching for a right-fit college, applying to colleges and making a final selection.</p>
+          </div>
+        
+          <button class="accordion"><i class="fas fa-file-alt"></i>College Admission Essay Package</button>
+          <div class="panel">
+            <p>Writing admission essays is sometimes the hardest part of the process for students. The admission essay is an opportunity for the college applicant to stand out…to shine. My College Helper works with students on brainstorming topics, creating an outline and polishing drafts until they are completed essays.</p>
+          </div>
+        
+          <button class="accordion"><i class="fas fa-university"></i>College Application Assistance</button>
+          <div class="panel">
+            <p>Filling out the Common Application, the Coalition Application or specific college apps can be a confusing and time-consuming process. My College Helper will review applications with students to make sure they are accurate and complete.</p>
+          </div>
+        
+          <button class="accordion"><i class="fas fa-comments"></i>Interview Assistance</button>
+          <div class="panel">
+            <p>My College Helper can prepare students through the use of mock interviews and specific interviewing tips.</p>
+          </div>
+        
+          <button class="accordion"><i class="fas fa-exchange-alt"></i>Transfer Package</button>
+          <div class="panel">
+            <p>College students seeking to transfer to another school have special needs and requirements. My College Helper will provide support and information through the transfer process.</p>
+          </div>
+        
+          <button class="accordion"><i class="fas fa-graduation-cap"></i>Graduate School Applications and Essays</button>
+          <div class="panel">
+            <p>Applying to graduate school is a very different process for students. My College Helper can provide guidance and support through the graduate school application process.</p>
+          </div>
+        
+          <button class="accordion"><i class="fas fa-tools"></i>Customized Services</button>
+          <div class="panel">
+            <p>My College Helper will customize services to best meet your needs. </p>
+          </div>
+        
+          <button class="accordion"><i class="fas fa-clock"></i>Hourly Services</button>
+          <div class="panel">
+            <p>Sometimes students and families just need a few hours of my consulting time and it makes more sense to pay an hourly rate. Please contact me by email at joanne@mycollegehelper.com to see if an hourly rate works best for you.</p>
+          </div>
         </div>
-      
-        <button class="accordion"><i class="fas fa-file-alt"></i>College Admission Essay Package</button>
-        <div class="panel">
-          <p>Writing admission essays is sometimes the hardest part of the process for students. The admission essay is an opportunity for the college applicant to stand out…to shine. My College Helper works with students on brainstorming topics, creating an outline and polishing drafts until they are completed essays.</p>
-        </div>
-      
-        <button class="accordion"><i class="fas fa-university"></i>College Application Assistance</button>
-        <div class="panel">
-          <p>Filling out the Common Application, the Coalition Application or specific college apps can be a confusing and time-consuming process. My College Helper will review applications with students to make sure they are accurate and complete.</p>
-        </div>
-      
-        <button class="accordion"><i class="fas fa-comments"></i>Interview Assistance</button>
-        <div class="panel">
-          <p>My College Helper can prepare students through the use of mock interviews and specific interviewing tips.</p>
-        </div>
-      
-        <button class="accordion"><i class="fas fa-exchange-alt"></i>Transfer Package</button>
-        <div class="panel">
-          <p>College students seeking to transfer to another school have special needs and requirements. My College Helper will provide support and information through the transfer process.</p>
-        </div>
-      
-        <button class="accordion"><i class="fas fa-graduation-cap"></i>Graduate School Applications and Essays</button>
-        <div class="panel">
-          <p>Applying to graduate school is a very different process for students. My College Helper can provide guidance and support through the graduate school application process.</p>
-        </div>
-      
-        <button class="accordion"><i class="fas fa-tools"></i>Customized Services</button>
-        <div class="panel">
-          <p>My College Helper will customize services to best meet your needs. </p>
-        </div>
-      
-        <button class="accordion"><i class="fas fa-clock"></i>Hourly Services</button>
-        <div class="panel">
-          <p>Sometimes students and families just need a few hours of my consulting time and it makes more sense to pay an hourly rate. Please contact me by email at joanne@mycollegehelper.com to see if an hourly rate works best for you.</p>
-        </div>
-      
+      </div>
         <br>
         <hr class="dark-hr">
         <p>In addition, My College Helper offers a speaker series on a variety of topics related to college search and planning. Please contact by email at joanne@mycollegehelper.com for topics and pricing information.</p>
@@ -150,6 +158,24 @@ for (i = 0; i < acc.length; i++) {
   else{
     acc[i].style.background = "#80add1"
   }
+}
+
+function collapseAll(){
+    for(i = 0; i < acc.length; i++){
+      acc[i].className = acc[i].className.replace("active", "");
+      var panel = acc[i].nextElementSibling;
+      panel.style.maxHeight = null;
+    }
+}
+
+function expandAll(){
+    for(i = 0; i < acc.length; i++){
+      if(acc[i].className.indexOf("active") < 0){
+        acc[i].className += " active";
+        var panel = acc[i].nextElementSibling;
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    }
 }
 </script>
 

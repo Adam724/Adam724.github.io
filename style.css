@@ -40,10 +40,19 @@
 }
 
   @media (min-width: 62em) {
+  #headshot-quote {
+    font-size: 1rem;
+  }
   .card-columns {
       -webkit-column-count: 3;
       -moz-column-count: 3;
       column-count: 3;
+  }
+}
+
+@media (min-width: 75em) {
+  #headshot-quote {
+    font-size: 1.25rem;
   }
 }
 
@@ -128,6 +137,11 @@ body.hasHover .navbar-nav li:hover  a {
     content: "\2212";
   }
 
+  .accordion-btn {
+    background-color: lightblue;
+    border: none;
+  }
+
   .panel {
     padding: 0 18px;
     background-color: white;
@@ -141,4 +155,4 @@ body.hasHover .navbar-nav li:hover  a {
       background-color: black;
   }
 
-  button:focus {outline:0;}
+  button:focus {outline:0 !important;}
