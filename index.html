@@ -24,6 +24,12 @@
   <script src="script.js"></script>
 </head>
 <body>
+<script>
+  if (!hasTouch()) {
+    document.body.className += "hasHover";
+}
+watchForHover();
+</script>
 
 <div class="jumbotron text-center" id="titleArea" style="margin-bottom:0">
   <div class="d-table mx-auto pr-2 pl-2" id="titleText">
