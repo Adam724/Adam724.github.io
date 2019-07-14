@@ -60,6 +60,15 @@
   }
 }
 
+@media (max-width: 48em) {
+  .logo{
+    width: 50% !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 #demo {
   border: solid gray;
   border-radius: 5px;
